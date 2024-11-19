@@ -1,0 +1,27 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#inicio {
+  background: linear-gradient(45deg, #6ab7ff, #4a90e2);
+  color: #fff;
+  padding: 2em 0;
+}
+header {
+  background: #2b3035;
+}
+
+h1.titulo {
+    margin-top: 2rem;
+}
+
+.navbar {
+    width: 100%;
+}
+
+footer {
+  background: #2b3035;
+  padding: 1em;
+}
