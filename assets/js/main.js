@@ -93,7 +93,7 @@ function productoVerMas(e) {
 
   Swal.fire({
     title: productoDescripcion.titulo,
-    text: "Lorem ipsum odor amet, consectetuer adipiscing elit. Mauris dictumst eleifend mattis metus sollicitudin et netus. Arcu quisque ullamcorper facilisis nec morbi natoque. Ut gravida senectus enim ipsum conubia nascetur.",
+    text: productoDescripcion.descripcion,
     imageUrl: productoDescripcion.imagen,
     imageHeight: 200,
     imageAlt: productoDescripcion.titulo,
