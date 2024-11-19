@@ -32,6 +32,7 @@ function cargarProductos(productosElegidos) {
             <div class="producto-detalles">
                 <h3 class="producto-titulo">${producto.titulo}</h3>
                 <p class="producto-precio">$${producto.precio}</p>
+                <button class="producto-ver-mas" id="${producto.id}">Ver más</button>
                 <button class="producto-agregar" id="${producto.id}">Agregar</button>
             </div>
         `;
@@ -40,6 +41,7 @@ function cargarProductos(productosElegidos) {
   });
 
   actualizarBotonesAgregar();
+  actualizarBotonesVerMas();
 }
 
 botonesCategorias.forEach((boton) => {
@@ -72,6 +74,29 @@ function actualizarBotonesAgregar() {
 
   botonesAgregar.forEach((boton) => {
     boton.addEventListener("click", agregarAlCarrito);
+  });
+}
+
+function actualizarBotonesVerMas() {
+  botonesVerMas = document.querySelectorAll(".producto-ver-mas");
+
+  botonesVerMas.forEach((boton) => {
+    boton.addEventListener("click", productoVerMas);
+  });
+}
+
+function productoVerMas(e) {
+  const idBoton = e.currentTarget.id;
+  const productoDescripcion = productos.find(
+    (producto) => producto.id === idBoton
+  );
+
+  Swal.fire({
+    title: productoDescripcion.titulo,
+    text: "Lorem ipsum odor amet, consectetuer adipiscing elit. Mauris dictumst eleifend mattis metus sollicitudin et netus. Arcu quisque ullamcorper facilisis nec morbi natoque. Ut gravida senectus enim ipsum conubia nascetur.",
+    imageUrl: productoDescripcion.imagen,
+    imageHeight: 200,
+    imageAlt: productoDescripcion.titulo,
   });
 }
 
