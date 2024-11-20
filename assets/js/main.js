@@ -49,7 +49,7 @@ botonesCategorias.forEach((boton) => {
     botonesCategorias.forEach((boton) => boton.classList.remove("active"));
     e.currentTarget.classList.add("active");
 
-    if (e.currentTarget.id == "0") {
+    if (e.currentTarget.id === "home") {
       window.location.href = "index.html";
     }
 
