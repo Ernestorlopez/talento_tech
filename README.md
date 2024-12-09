@@ -21,10 +21,10 @@ El cual devuelve los productos, sus categorías, imágenes y precios en un JSON 
 https://www.binariosistemas.com.ar/API_PHP/controller/categoria.php?op=GetAllCat
 El cual devuelve las categorías en un JSON que tiene el siguiente formato:
 
-{
+
     "id_categoria": "1",
     "nombre_categoria": "Abrigos"
-  },
+  
 
   
 El proyecto también posee una página de carrito de compras que guarda los elementos en el LocalStore, el cual posee alertas con la librería SweetAlert2 y Toastify.
